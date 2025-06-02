@@ -351,6 +351,37 @@ footer .container {
     background-color: #1da851;
 }
 
+/* Back To Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--accent-steel-blue);
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease;
+    z-index: 999;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background-color: var(--light-steel-blue);
+}
+
 /* --- Homepage Specific Styles (index.html) --- */
 
 .hero-section {
@@ -1258,6 +1289,14 @@ footer .container {
         left: 20px;
     }
 
+    #backToTop {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        bottom: 20px;
+        right: 20px;
+    }
+
     .page-hero {
         padding: 70px 0;
         margin-bottom: 40px;
@@ -1433,6 +1472,14 @@ footer .container {
         line-height: 50px;
         bottom: 15px;
         left: 15px;
+    }
+
+    #backToTop {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+        bottom: 15px;
+        right: 15px;
     }
 
     .page-hero {
