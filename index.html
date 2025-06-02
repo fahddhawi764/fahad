@@ -39,41 +39,152 @@
             .hero-section h1 { font-size: 1.5rem; }
             .btn-quote-large { font-size: 1rem; padding: 10px 20px; }
         }
+
+        /* شريط علوي */
+        .top-bar {
+            background: #222;
+            color: #fff;
+            font-size: 0.95rem;
+            padding: 7px 0;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: #25D366; text-decoration: none; margin-left: 8px; }
+        .top-social a { color: #fff; margin-left: 12px; font-size: 1.1rem; }
+
+        /* الهيدر */
+        .main-header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 100;
+        }
+        .main-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+        .logo img {
+            height: 55px;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .main-nav a {
+            color: #222;
+            font-weight: 600;
+            font-size: 1.07rem;
+            text-decoration: none;
+            transition: color 0.2s, border-bottom 0.2s;
+            padding-bottom: 4px;
+        }
+        .main-nav a:hover, .main-nav a[aria-current="page"] {
+            color: #25D366;
+            border-bottom: 2px solid #25D366;
+        }
+        .btn-quote.highlight {
+            background: #25D366;
+            color: #fff;
+            padding: 11px 26px;
+            border-radius: 26px;
+            font-weight: bold;
+            margin-right: 14px;
+            box-shadow: 0 2px 10px rgba(37,211,102,0.09);
+            transition: background 0.2s;
+        }
+        .btn-quote.highlight:hover {
+            background: #1ea954;
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #25D366;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        /* استجابة للجوال */
+        @media (max-width: 900px) {
+            .main-header .container {
+                flex-wrap: wrap;
+            }
+            .main-nav ul {
+                gap: 16px;
+            }
+        }
+        @media (max-width: 700px) {
+            .main-nav {
+                position: fixed;
+                top: 60px;
+                right: -100%;
+                width: 220px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.07);
+                transition: right 0.3s;
+                z-index: 1001;
+                padding-top: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav.open { right: 0; }
+            .main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 8px;
+            }
+            .nav-toggle { display: block; }
+            .btn-quote.highlight { margin: 12px 0 0 0; width: 100%; text-align: center; }
+        }
+
+        /* لإظهار القائمة الجانبية */
+        body.nav-open .main-nav { right: 0; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="top-bar">
-    <div class="container">
-        <span>تواصل معنا: <a href="tel:0558301397">0558301397</a></span>
-        <div class="top-social">
-            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+    <!-- شريط علوي للتواصل الاجتماعي -->
+    <div class="top-bar">
+        <div class="container">
+            <span>تواصل معنا: <a href="tel:0558301397">0558301397</a></span>
+            <div class="top-social">
+                <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
     </div>
-</div>
-
-<header class="main-header">
-    <div class="container">
-        <div class="logo">
-            <img src="images/logo.png" alt="شعار شركة فهد ضاوي الحربي للنقل والمعدات الثقيلة" loading="lazy">
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار شركة فهد ضاوي الحربي للنقل والمعدات الثقيلة" loading="lazy">
+            </div>
+            <nav class="main-nav" aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="index.html" aria-current="page">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <a href="request-quote.html" class="btn btn-quote highlight">طلب عرض سعر</a>
+            <button class="nav-toggle" aria-label="فتح القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <nav class="main-nav" aria-label="القائمة الرئيسية">
-            <ul>
-                <li><a href="index.html" aria-current="page">الرئيسية</a></li>
-                <li><a href="services.html">خدماتنا</a></li>
-                <li><a href="about.html">من نحن</a></li>
-                <li><a href="gallery.html">المعرض</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
-            </ul>
-        </nav>
-        <a href="request-quote.html" class="btn btn-quote highlight">طلب عرض سعر</a>
-        <button class="nav-toggle" aria-label="فتح القائمة">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-</header>
+    </header>
 
     <main>
         <!-- قسم البطل (Hero) -->
@@ -188,6 +299,12 @@
             once: true,
             mirror: false,
         });
+    </script>
+    <script>
+        document.querySelector('.nav-toggle').onclick = function() {
+            document.body.classList.toggle('nav-open');
+            document.querySelector('.main-nav').classList.toggle('open');
+        };
     </script>
 </body>
 </html>
