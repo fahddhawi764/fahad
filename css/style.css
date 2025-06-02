@@ -52,19 +52,12 @@ header {
     border-bottom: 5px solid var(--accent-steel-blue); /* Changed to accent steel blue */
     box-shadow: 0 4px 15px var(--shadow-medium); /* More prominent shadow */
     z-index: 1000; /* Ensure header is always on top */
-    position: relative;
+    position: relative; /* Header is now relative, will scroll with content */
     transition: background-color var(--transition-speed) ease, padding var(--transition-speed) ease;
 }
 
-/* Sticky Header Style */
-header.sticky {
-    position: fixed; /* Makes header stick to top */
-    top: 0;
-    width: 100%;
-    background-color: rgba(33, 37, 41, 0.95); /* Slightly transparent primary dark gray when sticky */
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
+/* تم إزالة فئة .sticky: رأس الصفحة لن يبقى ثابتًا بعد الآن */
+
 
 header .container {
     display: flex;
