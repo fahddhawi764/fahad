@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - فهد داوي الحربي</title>
+
+    <meta name="description" content="تواصل مع شركة فهد داوي الحربي لخدمات النقل وتأجير المعدات الثقيلة. معلومات الاتصال، نموذج تواصل، وخريطة الموقع.">
+    <meta name="keywords" content="اتصل بنا, رقم هاتف, بريد إلكتروني, موقع الشركة, نموذج تواصل, فهد داوي الحربي">
+    <meta name="author" content="فهد داوي الحربي">
+    <meta property="og:title" content="اتصل بنا - فهد داوي الحربي">
+    <meta property="og:description" content="نحن هنا لمساعدتك. تواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال.">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg"> <meta property="og:url" content="https://yourwebsite.com/contact.html"> <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار فهد داوي الحربي" loading="lazy">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <a href="request-quote.html" class="btn btn-quote">طلب عرض سعر</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" data-aos="fade-down" data-aos-duration="800">
+            <div class="container">
+                <h1>اتصل بنا</h1>
+                <p>نحن هنا لمساعدتك. تواصل معنا اليوم لمناقشة احتياجات مشاريعك.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                        <h2>معلومات الاتصال المباشرة</h2>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <p><strong>رقم الهاتف:</strong> <a href="tel:+966501234567">+966 50 123 4567</a></p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:info@fahddarbi.com">info@fahddarbi.com</a></p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <p><strong>ساعات العمل:</strong> الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p><strong>العنوان:</strong> شارع الملك فهد، حي الصحافة، الرياض، المملكة العربية السعودية</p>
+                        </div>
+                        <div class="social-contact-links">
+                            <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
+                        <h2>أرسل لنا رسالة</h2>
+                        <div id="form-messages" class="form-messages" aria-live="polite"></div>
+                        <form id="contactForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل:</label>
+                                <input type="text" id="name" name="name" required aria-required="true">
+                                <p class="error-message" id="name-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني:</label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                                <p class="error-message" id="email-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف (اختياري):</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">الموضوع:</label>
+                                <input type="text" id="subject" name="subject" required aria-required="true">
+                                <p class="error-message" id="subject-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">رسالتك:</label>
+                                <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                                <p class="error-message" id="message-error"></p>
+                            </div>
+                            
+                            <div class="form-group g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-aos="fade-up" data-aos-delay="300">
+                                </div>
+                            <p class="error-message" id="recaptcha-error"></p>
+
+                            <button type="submit" id="submitBtn" class="btn btn-primary">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="map-container" data-aos="fade-up" data-aos-delay="300">
+                    <h2>موقعنا على الخريطة</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.756708945417!2d46.68725941499525!3d24.71355198413645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03f3f3f3f3f3%3A0x3f3f3f3f3f3f3f3f!2sKing%20Fahd%20Rd%2C%20As%20Sahafah%2C%20Riyadh%2013315%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="map-note">يرجى ملاحظة أن هذا الموقع هو مثال توضيحي. يرجى استخدام موقع شركتك الفعلي.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 فهد داوي الحربي. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/966501234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+        });
+
+        // ======================================================
+        // JavaScript لمعالجة النموذج (Form Handling JavaScript)
+        // ======================================================
+
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessages = document.getElementById('form-messages');
+
+        // عناصر حقول النموذج للحصول على قيمها والتحقق منها
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+
+        // عناصر رسائل الخطأ
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const subjectError = document.getElementById('subject-error');
+        const messageError = document.getElementById('message-error');
+        const recaptchaError = document.getElementById('recaptcha-error');
+
+        function displayMessage(type, message) {
+            formMessages.textContent = message;
+            formMessages.className = 'form-messages ' + type; // Add success or error class
+            formMessages.style.display = 'block'; // Show the message
+            setTimeout(() => {
+                formMessages.style.display = 'none'; // Hide after a few seconds
+                formMessages.textContent = '';
+                formMessages.className = 'form-messages';
+            }, 5000); // Hide after 5 seconds
+        }
+
+        function isValidEmail(email) {
+            // بسيطة للتحقق من تنسيق البريد الإلكتروني
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+
+            // إخفاء جميع رسائل الخطأ السابقة
+            nameError.textContent = '';
+            emailError.textContent = '';
+            subjectError.textContent = '';
+            messageError.textContent = '';
+            recaptchaError.textContent = '';
+            formMessages.style.display = 'none';
+
+            let isValid = true;
+
+            // 1. التحقق من الحقول المطلوبة
+            if (nameInput.value.trim() === '') {
+                nameError.textContent = 'الاسم مطلوب.';
+                isValid = false;
+            }
+            if (emailInput.value.trim() === '') {
+                emailError.textContent = 'البريد الإلكتروني مطلوب.';
+                isValid = false;
+            } else if (!isValidEmail(emailInput.value.trim())) {
+                emailError.textContent = 'صيغة البريد الإلكتروني غير صحيحة.';
+                isValid = false;
+            }
+            if (subjectInput.value.trim() === '') {
+                subjectError.textContent = 'الموضوع مطلوب.';
+                isValid = false;
+            }
+            if (messageInput.value.trim() === '') {
+                messageError.textContent = 'الرسالة مطلوبة.';
+                isValid = false;
+            }
+
+            // 2. التحقق من reCAPTCHA (الجانب العميل فقط)
+            // هذا التحقق يضمن أن المستخدم قد تفاعل مع reCAPTCHA.
+            // التحقق الفعلي من صحة reCAPTCHA (Verification) يجب أن يتم على الخادم (Backend).
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (recaptchaResponse.length === 0) {
+                recaptchaError.textContent = 'يرجى التحقق من أنك لست روبوتًا.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                displayMessage('error', 'يرجى تصحيح الأخطاء في النموذج.');
+                return; // إيقاف العملية إذا كان هناك أخطاء
+            }
+
+            // 3. عرض مؤشر التحميل وتعطيل الزر
+            submitBtn.textContent = 'جاري الإرسال...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading'); // Add a loading class for potential CSS styling
+
+            // ====================================================================
+            // 4. محاكاة إرسال النموذج (لأننا لا نملك برمجة خلفية حقيقية)
+            // في تطبيق حقيقي، هنا سترسل البيانات إلى خادمك باستخدام Fetch API أو XMLHttpRequest
+            // ====================================================================
+            setTimeout(() => {
+                // بعد محاكاة الإرسال (مثلاً 2 ثانية)
+                const submissionSuccessful = true; // افترض النجاح لأغراض العرض التوضيحي
+
+                if (submissionSuccessful) {
+                    displayMessage('success', 'شكراً لك! تم استلام رسالتك بنجاح.');
+                    contactForm.reset(); // مسح النموذج بعد النجاح
+                    grecaptcha.reset(); // إعادة تعيين reCAPTCHA
+                } else {
+                    displayMessage('error', 'عذراً، حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى لاحقًا.');
+                    // إذا فشل الإرسال، قد تحتاج إلى إعادة تعيين reCAPTCHA أيضًا
+                    grecaptcha.reset();
+                }
+
+                // إعادة الزر إلى حالته الأصلية
+                submitBtn.textContent = 'إرسال الرسالة';
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+            }, 2000); // محاكاة وقت التحميل
+        });
+    </script>
+</body>
+</html>

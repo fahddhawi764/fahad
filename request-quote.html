@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب عرض سعر - فهد داوي الحربي</title>
+
+    <meta name="description" content="اطلب عرض سعر مخصص لخدمات النقل البري وتأجير المعدات الثقيلة من فهد داوي الحربي في السعودية.">
+    <meta name="keywords" content="طلب عرض سعر, نقل بضائع, تأجير معدات, شاحنات, رافعات, حفارات, الرياض, جدة, الدمام, واتساب">
+    <meta name="author" content="فهد داوي الحربي">
+    <meta property="og:title" content="طلب عرض سعر - فهد داوي الحربي">
+    <meta property="og:description" content="املأ النموذج للحصول على عرض سعر سريع لخدمات النقل وتأجير المعدات الثقيلة.">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg"> <meta property="og:url" content="https://yourwebsite.com/request-quote.html"> <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار فهد داوي الحربي" loading="lazy">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <a href="request-quote.html" class="btn btn-quote">طلب عرض سعر</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" data-aos="fade-down" data-aos-duration="800">
+            <div class="container">
+                <h1>طلب عرض سعر</h1>
+                <p>املأ النموذج أدناه للحصول على عرض سعر مخصص لخدماتنا. سيتم إرسال طلبك مباشرة عبر واتساب.</p>
+            </div>
+        </section>
+
+        <section class="request-form-section" data-aos="fade-up" data-aos-delay="200">
+            <div class="container">
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="serviceType">نوع الخدمة المطلوبة:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="serviceTruck" name="serviceType" value="نقل البضائع" checked>
+                            <label for="serviceTruck">نقل البضائع</label>
+
+                            <input type="radio" id="serviceEquipment" name="serviceType" value="تأجير المعدات الثقيلة">
+                            <label for="serviceEquipment">تأجير المعدات الثقيلة</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="locationFrom">الموقع من (المدينة/المنطقة):</label>
+                        <input type="text" id="locationFrom" name="locationFrom" placeholder="مثال: الرياض" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="locationTo">الموقع إلى (المدينة/المنطقة):</label>
+                        <input type="text" id="locationTo" name="locationTo" placeholder="مثال: جدة" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">تفاصيل إضافية (اختياري):</label>
+                        <textarea id="details" name="details" rows="5" placeholder="أدخل أي تفاصيل إضافية حول طلبك (مثل: نوع البضاعة، حجم المعدة المطلوبة، تاريخ الخدمة المفترض، وزن الحمولة، إلخ.)"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">إرسال الطلب عبر واتساب</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 فهد داوي الحربي. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/966501234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, /* مدة الأنيميشن بالملي ثانية */
+            once: true,    /* لتشغيل الأنيميشن مرة واحدة فقط عند التمرير */
+            mirror: false, /* تشغيل الأنيميشن في كل مرة يتم فيها التمرير */
+        });
+
+        // JavaScript لنموذج طلب عرض السعر وتحويله إلى واتساب
+        document.getElementById('quoteForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+
+            const serviceType = document.querySelector('input[name="serviceType"]:checked').value;
+            const locationFrom = document.getElementById('locationFrom').value;
+            const locationTo = document.getElementById('locationTo').value;
+            const details = document.getElementById('details').value;
+
+            // بناء رسالة الواتساب
+            let whatsappMessage = `طلب عرض سعر جديد:\n\n`;
+            whatsappMessage += `نوع الخدمة: ${serviceType}\n`;
+            whatsappMessage += `الموقع من: ${locationFrom}\n`;
+            whatsappMessage += `الموقع إلى: ${locationTo}\n`;
+
+            if (details) {
+                whatsappMessage += `تفاصيل إضافية: ${details}\n`;
+            }
+
+            whatsappMessage += `\nالرجاء التواصل معي بخصوص هذا الطلب في أقرب وقت.`;
+
+            // رقم الواتساب الخاص بالشركة (استبدل هذا الرقم برقمك الفعلي)
+            const whatsappNumber = '966501234567'; // مثال: +966 50 123 4567
+
+            // ترميز الرسالة لضمان عملها في رابط URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // فتح رابط الواتساب في تبويب جديد
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>
