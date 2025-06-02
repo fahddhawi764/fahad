@@ -1,0 +1,118 @@
+/* --- Services Page Specific Styles (services.html) --- */
+
+.page-hero {
+    background-color: var(--primary-dark-gray);
+    color: var(--text-on-dark);
+    text-align: center;
+    padding: 90px 0; /* More padding */
+    margin-bottom: 50px;
+    box-shadow: 0 6px 20px var(--shadow-medium);
+    border-radius: var(--border-radius-main);
+}
+
+.page-hero h1 {
+    color: var(--text-on-dark);
+    font-size: 4em;
+    margin-bottom: 25px;
+}
+
+.page-hero p {
+    font-size: 1.3em;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--text-on-dark);
+    line-height: 1.7;
+}
+
+.service-detail-section {
+    padding: 60px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 10px 30px var(--shadow-light);
+}
+
+.service-detail-section h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 18px;
+}
+.service-detail-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 6px;
+    background-color: var(--accent-steel-blue);
+    border-radius: 3px;
+}
+
+.service-content {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.service-content.reverse-order {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    width: 45%;
+    max-width: 700px;
+    height: auto;
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 10px 25px var(--shadow-medium);
+    flex-shrink: 0;
+    transition: transform var(--transition-speed) ease;
+}
+.service-image:hover {
+    transform: scale(1.03);
+}
+
+.service-content .text-content {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.service-content h3 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.service-content p {
+    font-size: 1.15em;
+    margin-bottom: 35px;
+    line-height: 2;
+}
+
+.service-content ul {
+    list-style: none;
+    margin-bottom: 40px;
+    padding-right: 0;
+}
+
+.service-content ul li {
+    margin-bottom: 18px;
+    font-size: 1.1em;
+    color: var(--text-dark);
+    display: flex;
+    align-items: flex-start;
+    text-align: right;
+    line-height: 1.7;
+}
+
+.service-content ul li i {
+    color: #25d366;
+    margin-left: 20px;
+    flex-shrink: 0;
+    margin-top: 8px;
+    font-size: 1.3em;
+}
+
