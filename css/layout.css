@@ -1,0 +1,155 @@
+.container {
+    width: 90%;
+    max-width: 1280px; /* Slightly wider container */
+    margin: 0 auto;
+    padding: 30px 0; /* Increased vertical padding for container */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-dark-gray);
+    color: var(--text-on-dark);
+    padding: 18px 0; /* Slightly more padding in header */
+    border-bottom: 5px solid var(--accent-steel-blue);
+    box-shadow: 0 4px 15px var(--shadow-medium);
+    z-index: 1000;
+    position: relative; /* Header is now relative, will scroll with content */
+    transition: background-color var(--transition-speed) ease, padding var(--transition-speed) ease;
+}
+
+/* تم إزالة فئة .sticky: رأس الصفحة لن يبقى ثابتًا بعد الآن */
+
+
+header .container {
+    padding: 0; /* Remove container padding in header to manage internal spacing */
+}
+
+.logo img {
+    height: 70px; /* Slightly larger logo */
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+.logo img:hover {
+    transform: scale(1.08);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 35px; /* Increased spacing between nav items */
+}
+
+nav ul li a {
+    color: var(--text-on-dark);
+    text-decoration: none;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em; /* Slightly larger nav links */
+    padding: 10px 0; /* More vertical padding for clickable area */
+    position: relative;
+    transition: color var(--transition-speed) ease;
+}
+
+nav ul li a:hover {
+    color: var(--light-steel-blue);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent-steel-blue);
+    bottom: -8px; /* Moved slightly further down */
+    right: 0;
+    transition: width 0.3s ease-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+/* Main Content General Styling */
+main {
+    padding: 60px 0; /* More vertical spacing for main content */
+}
+
+section {
+    background-color: #fff;
+    padding: 70px; /* Increased padding for sections */
+    margin-bottom: 50px; /* Increased margin */
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 10px 30px var(--shadow-light); /* Softer, deeper shadow */
+    overflow: hidden;
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 800; /* Extra bold for headings */
+    color: var(--primary-dark-gray);
+    margin-bottom: 35px; /* Increased spacing */
+    text-align: right;
+    line-height: 1.25; /* Adjusted for better readability */
+}
+
+p {
+    margin-bottom: 1.5em; /* Consistent bottom margin for paragraphs */
+    line-height: 1.9; /* Slightly more spacious line-height */
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-dark-gray);
+    color: var(--text-on-dark);
+    text-align: center;
+    padding: 50px 0; /* More padding */
+    font-size: 1.05em; /* Slightly larger text */
+    border-top: 5px solid var(--accent-steel-blue);
+}
+
+footer .container {
+    padding: 0; /* Remove container padding in footer */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--text-on-dark);
+    font-size: 2em; /* Larger icons */
+    margin-right: 25px; /* Increased spacing */
+    transition: all var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-steel-blue);
+    transform: translateY(-6px) scale(1.15); /* More pronounced effect */
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px; /* More space from bottom */
+    left: 30px; /* More space from left */
+    width: 70px; /* Larger button */
+    height: 70px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3em; /* Larger icon */
+    line-height: 70px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45); /* Deeper shadow */
+    z-index: 1000;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.2) translateY(-7px); /* More pronounced lift */
+    background-color: #1da851;
+}

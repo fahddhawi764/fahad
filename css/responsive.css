@@ -1,0 +1,440 @@
+/* --- Responsive Design Adjustments --- */
+
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .hero-section {
+        padding: 150px 0;
+    }
+    .hero-section h1 {
+        font-size: 3.5em;
+    }
+    .hero-section p {
+        font-size: 1.3em;
+    }
+    .featured-services h2, .why-choose-us h2, .call-to-action-bottom h2 {
+        font-size: 2.8em;
+    }
+    .featured-services .services-grid,
+    .gallery-section .image-grid,
+    .gallery-section .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    section {
+        padding: 50px;
+    }
+    .service-detail-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+    .service-content, .service-content.reverse-order {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .service-image, .service-content .text-content {
+        width: 90%;
+        max-width: 550px;
+    }
+    .request-form-section form {
+        max-width: 90%;
+    }
+    .contact-grid {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    .contact-info, .contact-form {
+        width: 90%;
+        max-width: 550px;
+    }
+    .company-video-section .video-wrapper {
+        padding-bottom: 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 10px;
+    }
+    nav ul li {
+        margin-left: 0;
+    }
+    nav ul li a::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .btn-quote {
+        margin-top: 10px;
+    }
+
+    .hero-section {
+        padding: 120px 0;
+        margin-bottom: 40px;
+    }
+    .hero-section h1 {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+    }
+    .hero-section p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-section .btn {
+        width: 85%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 12px 28px;
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 40px 0;
+    }
+    section {
+        padding: 40px;
+        margin-bottom: 30px;
+    }
+    h1, h2, h3, h4 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.8;
+    }
+
+    .featured-services h2, .why-choose-us h2, .call-to-action-bottom h2 {
+        font-size: 2.5em;
+        margin-bottom: 35px;
+    }
+    .featured-services .services-grid,
+    .why-choose-us .features-grid,
+    .gallery-section .image-grid,
+    .gallery-section .video-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .service-card, .feature-item, .gallery-item, .video-item {
+        padding: 30px;
+    }
+    .service-card h3 {
+        font-size: 1.8em;
+    }
+    .feature-item h4 {
+        font-size: 1.4em;
+    }
+    .call-to-action-bottom {
+        padding: 70px 0;
+        margin-top: 40px;
+    }
+    .call-to-action-bottom h2 {
+        font-size: 2.8em;
+    }
+    .call-to-action-bottom p {
+        font-size: 1.2em;
+    }
+    .btn-quote-large {
+        padding: 15px 35px;
+        font-size: 1.3em;
+    }
+
+    footer {
+        padding: 40px 0;
+    }
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5em;
+        line-height: 60px;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .page-hero {
+        padding: 70px 0;
+        margin-bottom: 40px;
+    }
+    .page-hero h1 {
+        font-size: 3.2em;
+    }
+    .page-hero p {
+        font-size: 1.1em;
+    }
+    .service-detail-section {
+        padding: 40px;
+        margin-bottom: 40px;
+    }
+    .service-detail-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        padding-bottom: 15px;
+    }
+    .service-detail-section h2::after {
+        width: 100px;
+    }
+    .service-content {
+        gap: 30px;
+    }
+    .service-image {
+        margin-bottom: 30px;
+    }
+    .service-content ul li {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .radio-group label {
+        width: 100%;
+        text-align: center;
+        padding: 14px 28px;
+    }
+    .gallery-item img {
+        height: 250px;
+    }
+    .video-item iframe {
+        height: 300px;
+    }
+    .contact-info h2, .contact-form h2 {
+        font-size: 1.8em;
+    }
+    .info-item {
+        font-size: 1.05em;
+    }
+    .social-contact-links a {
+        font-size: 1.8em;
+    }
+    .contact-form input, .contact-form textarea {
+        padding: 14px 16px;
+    }
+    .map-container iframe {
+        height: 350px;
+    }
+    .company-video-section .video-wrapper {
+        padding-bottom: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 0;
+    }
+    header {
+        padding: 15px 0;
+    }
+    .logo img {
+        height: 60px;
+    }
+    nav ul li a {
+        font-size: 1.1em;
+        padding: 8px 0;
+    }
+    .btn {
+        padding: 10px 22px;
+        font-size: 1.05em;
+    }
+    .hero-section {
+        padding: 100px 0;
+        margin-bottom: 30px;
+    }
+    .hero-section h1 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+    .hero-section p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .hero-section .btn {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    main {
+        padding: 30px 0;
+    }
+    section {
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    h1, h2, h3, h4 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 0.95em;
+    }
+
+    .featured-services h2, .why-choose-us h2, .call-to-action-bottom h2 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .featured-services .services-grid {
+        gap: 25px;
+    }
+    .service-card {
+        padding: 35px;
+    }
+    .service-card i.fas {
+        font-size: 4.5em;
+    }
+    .service-card h3 {
+        font-size: 1.6em;
+    }
+    .why-choose-us .features-grid {
+        gap: 25px;
+    }
+    .feature-item {
+        padding: 35px;
+    }
+    .feature-item i {
+        font-size: 4em;
+    }
+    .feature-item h4 {
+        font-size: 1.3em;
+    }
+    .call-to-action-bottom {
+        padding: 50px 0;
+        margin-top: 30px;
+    }
+    .call-to-action-bottom h2 {
+        font-size: 2.2em;
+    }
+    .call-to-action-bottom p {
+        font-size: 1.1em;
+    }
+    .btn-quote-large {
+        padding: 12px 28px;
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 30px 0;
+        font-size: 0.9em;
+    }
+    .social-links a {
+        font-size: 1.8em;
+        margin-right: 15px;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 2.2em;
+        line-height: 50px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .page-hero {
+        padding: 60px 0;
+        margin-bottom: 30px;
+    }
+    .page-hero h1 {
+        font-size: 2.5em;
+    }
+    .page-hero p {
+        font-size: 1em;
+    }
+    .service-detail-section {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .service-detail-section h2 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .service-detail-section h2::after {
+        width: 80px;
+        height: 4px;
+    }
+    .service-content {
+        gap: 30px;
+    }
+    .service-image {
+        margin-bottom: 30px;
+    }
+    .service-content ul li {
+        font-size: 0.95em;
+        margin-bottom: 12px;
+    }
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .radio-group label {
+        width: 100%;
+        text-align: center;
+        padding: 12px 25px;
+    }
+    .gallery-item img {
+        height: 200px;
+    }
+    .gallery-item .overlay {
+        padding: 18px;
+        font-size: 1.1em;
+    }
+    .video-item iframe {
+        height: 250px;
+    }
+    .video-item p {
+        padding: 15px;
+        font-size: 1em;
+    }
+    .contact-section {
+        padding: 40px;
+    }
+    .contact-grid {
+        gap: 30px;
+    }
+    .contact-info, .contact-form {
+        padding: 30px;
+    }
+    .contact-info h2, .contact-form h2 {
+        font-size: 1.8em;
+    }
+    .info-item {
+        font-size: 1em;
+    }
+    .map-container {
+        padding: 30px;
+    }
+    .map-container iframe {
+        height: 300px;
+    }
+    .company-video-section {
+        padding: 40px;
+        margin-top: 30px;
+    }
+    .company-video-section h2 {
+        font-size: 2.2em;
+    }
+    .company-video-section .video-wrapper {
+        padding-bottom: 75%;
+    }
+    .video-caption {
+        font-size: 1em;
+    }
+    .g-recaptcha {
+        transform: scale(0.77);
+        transform-origin: right;
+    }
+}

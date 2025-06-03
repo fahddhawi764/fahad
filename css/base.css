@@ -1,0 +1,69 @@
+/* Google Fonts Import - خطوط عربية احترافية: Tajawal للعناوين و Noto Sans Arabic للنصوص */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;700&family=Tajawal:wght@400;700;800&display=swap');
+
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+:root {
+    /* Define a modern color palette - لوحة ألوان الرمادي والأزرق الفولاذي */
+    --primary-dark-gray: #212529;   /* Deep Charcoal Grey */
+    --secondary-dark-gray: #343A40; /* Darker Grey for elements */
+    --accent-steel-blue: #17A2B8;   /* Steel Blue Accent */
+    --light-steel-blue: #20C997;    /* Lighter Steel Blue for highlights */
+    --text-dark: #222222;          /* Soft Black for general text */
+    --text-on-dark: #F8F9FA;       /* Off-white text for dark backgrounds */
+    --bg-light-gray: #F8F9FA;      /* Very Light Gray background */
+    --bg-medium-gray: #EAECEE;     /* Medium Light Gray for cards/sections */
+    --border-light-gray: #CED4DA;  /* Light Gray border */
+
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-deep: rgba(0, 0, 0, 0.25); /* Added for deeper shadows */
+    --transition-speed: 0.4s;
+    --border-radius-main: 10px;
+}
+
+/* Custom Scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-medium-gray);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-dark-gray);
+    border-radius: 10px;
+    border: 3px solid var(--bg-medium-gray);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark-gray);
+}
+
+/* Text Selection Color */
+::selection {
+    background-color: var(--accent-steel-blue);
+    color: var(--text-on-dark);
+}
+::-moz-selection {
+    background-color: var(--accent-steel-blue);
+    color: var(--text-on-dark);
+}
+
+
+body {
+    font-family: 'Noto Sans Arabic', Arial, sans-serif;
+    line-height: 1.8; /* Increased line-height for better readability */
+    color: var(--text-dark);
+    background-color: var(--bg-light-gray);
+    direction: rtl; /* Right-to-left for Arabic content */
+    text-align: right; /* Default text alignment for Arabic */
+    overflow-x: hidden; /* Prevents horizontal scrollbar from AOS animations */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    letter-spacing: 0.02em; /* Subtle letter spacing for overall readability */
+}

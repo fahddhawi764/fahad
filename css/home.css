@@ -1,0 +1,195 @@
+/* --- Homepage Specific Styles (index.html) --- */
+
+.hero-section {
+    background: linear-gradient(rgba(33, 37, 41, 0.75), rgba(33, 37, 41, 0.75)), url('../images/hero-bg.jpg') no-repeat center center/cover; /* Slightly darker overlay */
+    color: var(--text-on-dark);
+    text-align: center;
+    padding: 180px 0; /* More vertical padding */
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-main);
+    margin-bottom: 50px; /* More margin */
+}
+
+.hero-section h1 {
+    font-size: 4.5em; /* Larger heading */
+    margin-bottom: 35px; /* More spacing */
+    color: var(--text-on-dark);
+    line-height: 1.2;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Stronger text shadow */
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Larger description */
+    margin-bottom: 60px; /* More spacing */
+    color: var(--text-on-dark);
+    max-width: 900px; /* Wider text area */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7; /* Adjusted for larger text */
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased spacing between buttons */
+    flex-wrap: wrap;
+}
+
+
+.featured-services h2,
+.why-choose-us h2,
+.call-to-action-bottom h2 {
+    font-size: 3.2em; /* Larger main headings */
+    margin-bottom: 40px; /* More spacing */
+    letter-spacing: 0.03em; /* Subtle letter spacing for headings */
+}
+
+.featured-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Larger min-width for cards */
+    gap: 45px; /* Increased spacing */
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 45px; /* Increased padding */
+    border-radius: var(--border-radius-main);
+    text-align: center;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--border-light-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before { /* Subtle background pattern/gradient */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(33, 37, 41, 0.08), transparent 70%); /* Slightly more prominent tint */
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-18px); /* More pronounced lift */
+    box-shadow: 0 18px 40px var(--shadow-medium); /* Stronger shadow */
+    border-color: var(--accent-steel-blue); /* Border color change on hover to steel blue */
+}
+
+.service-card i.fas { /* Style for Font Awesome icons in cards */
+    font-size: 5em; /* Larger icons */
+    margin-bottom: 30px; /* More spacing */
+    color: var(--primary-dark-gray); /* Changed to primary dark gray */
+    transition: color var(--transition-speed) ease;
+}
+.service-card:hover i.fas {
+    color: var(--accent-steel-blue); /* Icon color change on hover to steel blue */
+}
+
+
+.service-card h3 {
+    color: var(--primary-dark-gray); /* Changed to primary dark gray */
+    margin-bottom: 20px;
+    font-size: 2em; /* Larger heading */
+}
+
+.service-card p {
+    font-size: 1.1em; /* Larger paragraph text */
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+.why-choose-us {
+    background-color: var(--primary-dark-gray); /* Dark background for this section */
+    color: var(--text-on-dark);
+    padding: 70px; /* More padding */
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 10px 30px var(--shadow-medium); /* Stronger shadow */
+    margin-bottom: 50px;
+}
+
+.why-choose-us h2 {
+    color: var(--text-on-dark);
+    text-align: center;
+    margin-bottom: 50px; /* More spacing */
+}
+
+.why-choose-us .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger min-width */
+    gap: 35px; /* Increased spacing */
+    margin-top: 40px;
+    text-align: center;
+}
+
+.feature-item {
+    background-color: var(--secondary-dark-gray); /* Darker background for feature items */
+    padding: 40px; /* Increased padding */
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25); /* Stronger shadow */
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* More defined border */
+}
+
+.feature-item:hover {
+    transform: translateY(-10px); /* More pronounced lift */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* Even stronger shadow */
+    background-color: var(--primary-dark-gray); /* Slightly lighter on hover */
+}
+
+.feature-item i {
+    font-size: 4.5em; /* Even larger icons */
+    color: var(--accent-steel-blue);
+    margin-bottom: 30px;
+    transition: transform var(--transition-speed) ease;
+}
+.feature-item:hover i {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+.feature-item h4 {
+    color: var(--light-steel-blue);
+    margin-bottom: 18px;
+    font-size: 1.6em; /* Larger heading */
+}
+.feature-item p {
+    color: var(--text-on-dark);
+    font-size: 1.05em; /* Larger paragraph */
+    line-height: 1.7;
+}
+
+
+.call-to-action-bottom {
+    background: linear-gradient(to right, var(--primary-dark-gray), var(--secondary-dark-gray));
+    color: var(--text-on-dark);
+    text-align: center;
+    padding: 90px 0; /* More padding */
+    margin-top: 60px; /* More margin */
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.call-to-action-bottom h2 {
+    color: var(--text-on-dark);
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.call-to-action-bottom p {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    color: var(--text-on-dark);
+    line-height: 1.7;
+}
